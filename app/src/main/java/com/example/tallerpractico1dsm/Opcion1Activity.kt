@@ -9,14 +9,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
-
-lateinit var nota1 : EditText
-lateinit var nota2 : EditText
-lateinit var nota3 : EditText
-lateinit var nota4 : EditText
-lateinit var nota5 : EditText
-lateinit var calcular: Button
-lateinit var resultado: TextView
+import java.text.DecimalFormat
 
 class Opcion1Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,18 +17,33 @@ class Opcion1Activity : AppCompatActivity() {
         setContentView(R.layout.activity_opcion1)
 
         //Capturando datos y procesándolos
-        nota1 = findViewById(R.id.IdNota1)
-        nota2 = findViewById(R.id.IdNota2)
-        nota3 = findViewById(R.id.IdNota3)
-        nota4 = findViewById(R.id.IdNota4)
-        nota5 = findViewById(R.id.IdNota5)
+        var nota1Edit = findViewById<EditText>(R.id.IdNota1)
+        var nota2Edit = findViewById<EditText>(R.id.IdNota2)
+        var nota3Edit = findViewById<EditText>(R.id.IdNota3)
+        var nota4Edit = findViewById<EditText>(R.id.IdNota4)
+        var nota5Edit = findViewById<EditText>(R.id.IdNota5)
 
-        calcular = findViewById(R.id.IdCalcular)
+        var calcular = findViewById<Button>(R.id.IdCalcular)
 
+        //Capturando evento listener de botón
         calcular.setOnClickListener(){
 
+            var nota1 = nota1Edit.text.toString().toDouble()
+            var nota2 = nota2Edit.text.toString().toDouble()
+            var nota3 = nota3Edit.text.toString().toDouble()
+            var nota4 = nota4Edit.text.toString().toDouble()
+            var nota5 = nota5Edit.text.toString().toDouble()
 
+            //Promedio
+            var promedio = (nota1 + nota2 + nota3 + nota4 + nota5)/5
 
+            //Formato de 2 decimales
+            val formatoDecimal = DecimalFormat("0.00")
+            val resultadoRedondeado = formatoDecimal.format(promedio)
+
+            //Imprimiendo resultado
+            var resultado = findViewById<TextView>(R.id.IdResultado)
+            resultado.text = resultadoRedondeado.toString()
         }
     }
 
