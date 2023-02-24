@@ -44,6 +44,13 @@ class Opcion1Activity : AppCompatActivity() {
             //Imprimiendo resultado
             var resultado = findViewById<TextView>(R.id.IdResultado)
             resultado.text = resultadoRedondeado.toString()
+
+            var aprobo = findViewById<TextView>(R.id.aprobo)
+            if (resultadoRedondeado>="6.0"){
+                aprobo.text = "¡Usted ha aprobado, felicidades!"
+            } else{
+                aprobo.text = "Usted reprobó."
+            }
         }
     }
 
