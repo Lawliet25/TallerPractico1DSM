@@ -15,4 +15,15 @@
     <string name="ingresarNombre">Ingrese su nombre</string>
     <string name="salario">Ingrese su salario base</string>
 
+    <string name="PrimerNum">Digite el primer número</string>
+    <string name="SegundoNum">Digite el segundo número</string>
+    <string name="operacion">Seleccione la operación a realizar</string>
+
+    <string-array name="operaciones">
+        <item>Suma</item>
+        <item>Resta</item>
+        <item>Multiplicación</item>
+        <item>División</item>
+    </string-array>
+
 </resources>

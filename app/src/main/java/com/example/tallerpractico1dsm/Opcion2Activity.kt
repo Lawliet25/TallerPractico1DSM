@@ -58,12 +58,6 @@ class Opcion2Activity : AppCompatActivity() {
         }
     }
 
-
-
-
-
-
-
     //Codificando el menú y su navegación
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

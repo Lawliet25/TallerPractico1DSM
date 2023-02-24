@@ -5,13 +5,62 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Button
+import android.widget.EditText
+import android.widget.Spinner
+import android.widget.TextView
 import android.widget.Toast
+import java.text.DecimalFormat
 
 class Opcion3Activity : AppCompatActivity() {
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_opcion3)
+
+        var numUnoEdit = findViewById<EditText>(R.id.txtNum1)
+        var numDosEdit = findViewById<EditText>(R.id.txtNum2)
+        var spinnerEdit = findViewById<Spinner>(R.id.spinner)
+        var resultadoText = findViewById<TextView>(R.id.resultadoOp)
+        var btnCalcular = findViewById<Button>(R.id.btnCalcular)
+
+        btnCalcular.setOnClickListener(){
+
+            val formatoDecimal = DecimalFormat("0.00")
+
+            var num1 = numUnoEdit.text.toString().toDouble()
+            var num2 = numDosEdit.text.toString().toDouble()
+            var resultado=0.0
+            //Suma
+            if (spinnerEdit.selectedItem.toString()=="Suma"){
+                resultado = num1 + num2
+                val resultadoRedondeado = formatoDecimal.format(resultado)
+                resultadoText.text = "El resultado de la operación es: " + resultadoRedondeado.toString()
+            }
+            //Resta
+            if (spinnerEdit.selectedItem.toString()=="Resta"){
+                resultado = num1 - num2
+                val resultadoRedondeado = formatoDecimal.format(resultado)
+                resultadoText.text = "El resultado de la operación es: " + resultadoRedondeado.toString()
+            }
+            //Multiplicación
+            if (spinnerEdit.selectedItem.toString()=="Multiplicación"){
+                resultado = num1 * num2
+                val resultadoRedondeado = formatoDecimal.format(resultado)
+                resultadoText.text = "El resultado de la operación es: " + resultadoRedondeado.toString()
+            }
+            //División
+            if (spinnerEdit.selectedItem.toString()=="División"){
+                resultado = num1 / num2
+                val resultadoRedondeado = formatoDecimal.format(resultado)
+                resultadoText.text = "El resultado de la operación es: " + resultadoRedondeado.toString()
+            }
+
+        }
+
     }
+    //Funcionamiento de menú y navegación
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
 
         val inflater = menuInflater
