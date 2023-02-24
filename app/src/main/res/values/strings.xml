@@ -12,4 +12,7 @@
     <string name="calcular">Calcular</string>
     <string name="resultado">Resultado</string>
 
+    <string name="ingresarNombre">Ingrese su nombre</string>
+    <string name="salario">Ingrese su salario base</string>
+
 </resources>
