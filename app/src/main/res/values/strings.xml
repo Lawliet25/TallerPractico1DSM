@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">TallerPractico1DSM</string>
+    <string name="bienvenida">¡Bienvenido a taller práctico 1 de DSM!</string>
+    <string name="nombre">Rodrigo Fernando Valle Díaz</string>
+    <string name="carnet">VD191672</string>
+
+    <string name="nota1">Ingrese la primera nota</string>
+    <string name="nota2">Ingrese la segunda nota</string>
+    <string name="nota3">Ingrese la tercera nota</string>
+    <string name="nota4">Ingrese la cuarta nota</string>
+    <string name="nota5">Ingrese la quinta nota</string>
+    <string name="calcular">Calcular</string>
+    <string name="resultado">Resultado</string>
+
+</resources>
