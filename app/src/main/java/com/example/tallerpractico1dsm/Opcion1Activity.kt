@@ -43,7 +43,7 @@ class Opcion1Activity : AppCompatActivity() {
 
             //Imprimiendo resultado
             var resultado = findViewById<TextView>(R.id.IdResultado)
-            resultado.text = resultadoRedondeado.toString()
+            resultado.text = "Su promedio es: " + resultadoRedondeado.toString()
 
             var aprobo = findViewById<TextView>(R.id.aprobo)
             if (resultadoRedondeado>="6.0"){
